@@ -9,3 +9,7 @@ Promise.allSettled([p1, p2, p3])
   .catch((err) => {
     console.log("some promises might be rejected:", err);
   });
+
+async function allSettledFunc() {
+  const result = await Promise.allSettled([p1, p2, p3]);
+}
