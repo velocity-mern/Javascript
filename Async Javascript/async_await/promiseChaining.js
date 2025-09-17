@@ -64,19 +64,3 @@ async function placeOrderByUser() {
   }
 }
 placeOrderByUser();
-
-addToCart("laptop")
-  .then((cart) => {
-    console.log("cart", cart);
-    return placeOrder(cart);
-  })
-  .then((order) => {
-    console.log("order", order);
-    return makePayment(order);
-  })
-  .then((paymentResult) => {
-    console.log("paymentResult", paymentResult);
-  })
-  .catch((err) => {
-    console.log("facing problem:", err);
-  });
