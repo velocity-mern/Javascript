@@ -2,6 +2,7 @@ const person = {
   name: "Karn",
   age: 40,
   city: "Delhi",
+  getName: function () {},
 };
 
 console.log(person.name);

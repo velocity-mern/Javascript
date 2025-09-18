@@ -2,6 +2,9 @@ const person = {
   name: "Karn",
   age: 40,
   city: "Delhi",
+  address: {
+    city: "Delhi",
+  },
 };
 
 // person = {};
