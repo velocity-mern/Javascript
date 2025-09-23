@@ -25,3 +25,9 @@ console.log(toyatoIndia.__proto__.name);
 
 Object.assign(person, {});
 console.log("person", person);
+
+let student = {
+  name: "Nikhil Sharma",
+  age: 20,
+  education: "BE",
+};

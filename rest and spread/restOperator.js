@@ -26,6 +26,7 @@ const user = {
   city: "Pune",
 };
 
+//object destructuring
 const { id, ...details } = user;
 console.log("id", id);
 console.log("details", details);
