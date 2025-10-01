@@ -35,6 +35,17 @@ const user2 = {
 
 user2.getName();
 
+const user3 = {
+  name: "Arjun",
+  normalFun: function () {
+    const arrowFun = () => {
+      console.log("*****inside object with nested arrow function", this); //surrounding lexical scope
+    };
+    arrowFun();
+  },
+};
+user3.normalFun();
+
 // this inside class
 
 class Person {

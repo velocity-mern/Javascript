@@ -1,7 +1,7 @@
 const now = new Date();
 console.log("now", now);
 // access year
-console.log(now.getFullYear());
+console.log(new Date().getFullYear());
 console.log(now.getMonth());
 console.log(now.getDate());
 console.log(now.getDay()); // 0 => sunday, 6 for saturday
