@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Align Self</title>
+    <style>
+      .container {
+        display: flex;
+        height: 200px;
+        background: #eaeaea;
+      }
+      .item {
+        background: salmon;
+        margin: 10px;
+        padding: 20px;
+      }
+      .item:nth-child(2) {
+        align-self: flex-end;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Align Self Example</h2>
+    <div class="container">
+      <div class="item">Box 1</div>
+      <div class="item">Box 2 (bottom)</div>
+      <div class="item">Box 3</div>
+    </div>
+  </body>
+</html>
