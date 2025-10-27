@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="card">
+      <p id="child">I am child paragraph</p>
+    </div>
+
+    <script>
+      const child = document.getElementById("child");
+      child.parentElement.style.background = "lightgreen";
+      child.parentElement.style.padding = "10px";
+      child.parentElement.style.margin = "50px";
+    </script>
+  </body>
+</html>

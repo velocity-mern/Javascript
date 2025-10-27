@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    .bold {
+      font-weight: bold;
+    }
+  </style>
+  <body>
+    <div id="container">
+      <p>First</p>
+      <p>Second</p>
+      <p>Third</p>
+    </div>
+
+    <script>
+      const container = document.getElementById("container");
+      console.log("container", container.children); // array
+
+      container.children[0].textContent = "This is updated one";
+
+      container.children[1].style.color = "red";
+
+      container.children[2].classList.add("bold");
+    </script>
+  </body>
+</html>
