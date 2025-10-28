@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p>Pressed Key: <span id="key"></span></p>
+    <script>
+      const keySpan = document.getElementById("key");
+      document.addEventListener("keydown", (e) => {
+        console.log("e", e);
+        keySpan.textContent = e.key;
+      });
+    </script>
+  </body>
+</html>

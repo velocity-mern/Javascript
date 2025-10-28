@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2 id="title">Hello there</h2>
+    <button id="btn">Change Me</button>
+    <button id="reset">reset Me</button>
+
+    <script>
+      const title = document.getElementById("title");
+      const btn = document.getElementById("btn");
+      const reset = document.getElementById("reset");
+
+      console.log("title", title);
+      console.log("btn", btn);
+
+      btn.addEventListener("click", () => {
+        title.textContent = "Button Clicked";
+        title.style.background = "lightblue";
+      });
+
+      reset.addEventListener("click", () => {
+        title.textContent = "Hello there";
+      });
+    </script>
+  </body>
+</html>

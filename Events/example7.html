@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <div id="outer" style="padding: 20px; background: lightblue">
+      Outer
+      <div id="inner" style="padding: 20px; background: lightgreen">
+        Inner
+        <button id="button">Click Me</button>
+      </div>
+    </div>
+
+    <script>
+      // Capturing phase listeners
+      document.getElementById("outer").addEventListener("click", (event) => {
+        console.log("Outer (capturing)");
+        event.stopPropagation();
+      });
+
+      document.getElementById("inner").addEventListener("click", (event) => {
+        console.log("Inner (capturing)");
+        event.stopPropagation();
+      });
+
+      // Bubbling phase listeners
+
+      document.getElementById("button").addEventListener("click", (event) => {
+        console.log("Button clicked");
+        event.stopPropagation();
+      });
+    </script>
+  </body>
+</html>
