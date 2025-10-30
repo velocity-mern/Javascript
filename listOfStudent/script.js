@@ -10,7 +10,7 @@ async function fetchStudent() {
 
 function renderTable(data) {
   const tbody = document.getElementById("studentTable");
-
+  tbody.innerHTML = "";
   data.forEach((student) => {
     tbody.innerHTML += `
     <tr>
@@ -22,5 +22,20 @@ function renderTable(data) {
   });
 }
 
-function sortTable(column) {}
+let sortDirections = {};
+function sortTable(column) {
+  console.log("sortDirections", sortDirections);
+  sortDirections[column] = sortDirections[column] === "asc" ? "desc" : "asc";
+
+  const direction = sortDirections[column];
+
+  students.sort((a, b) => {
+    if (a[column] > b[column]) return direction === "asc" ? 1 : -1;
+    if (a[column] < b[column]) return direction === "asc" ? -1 : 1;
+    return 0;
+  });
+
+  console.log(`Sorted by ${column} (${direction})`);
+  renderTable(students);
+}
 fetchStudent();
